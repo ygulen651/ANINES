@@ -51,7 +51,7 @@ export default function BlogPost({ post, blogSettings }) {
         <nav className="navbar">
           <div className="navbar-brand">
             <Link href="/" className="logo-link">
-              <img src="/Artboard 1@2x.png" alt="OSLO" className="logo-image" />
+              <img src="/logo.png" alt="ANI" className="logo-image" />
             </Link>
           </div>
           
@@ -66,7 +66,7 @@ export default function BlogPost({ post, blogSettings }) {
           <ul className={`navbar-menu ${isMobileMenuOpen ? 'active' : ''}`}>
             <li className="menu-header">
               <div className="menu-logo">
-                <img src="/Artboard 1@2x.png" alt="OSLO" className="menu-logo-image" />
+                <img src="/logo.png" alt="ANI" className="menu-logo-image" />
               </div>
               <button onClick={() => setIsMobileMenuOpen(false)} className="close-button">×</button>
             </li>
@@ -315,6 +315,8 @@ export default function BlogPost({ post, blogSettings }) {
           line-height: 1.2;
         }
 
+        
+
         .blog-post-excerpt {
           margin: 0 40px 30px;
           padding: 20px;
@@ -551,9 +553,13 @@ export default function BlogPost({ post, blogSettings }) {
 
         .logo-link {
           text-decoration: none;
-          color: white;
+          color: #111;
           display: flex;
           align-items: center;
+          background: white;
+          padding: 8px 12px;
+          border-radius: 8px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
 
         .logo-text {
@@ -567,12 +573,12 @@ export default function BlogPost({ post, blogSettings }) {
         }
 
         .logo-image {
-          max-width: 450px;
-          max-height: 150px;
+          max-width: 140px;
+          max-height: 40px;
           width: auto;
           height: auto;
           object-fit: contain;
-          filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+          filter: none;
         }
 
         .menu-button {
@@ -661,12 +667,12 @@ export default function BlogPost({ post, blogSettings }) {
         }
 
         .menu-logo-image {
-          max-width: 200px;
-          max-height: 70px;
+          max-width: 120px;
+          max-height: 36px;
           width: auto;
           height: auto;
           object-fit: contain;
-          filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+          filter: none;
         }
 
         .menu-logo-text {
