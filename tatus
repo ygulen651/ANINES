@@ -1,0 +1,9 @@
+[33mda0db42[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+
+e bu  qe  
+
+ Tüm slider görsellerinin boyutlarını 300x300px olarak eşitledim - 1. ve 2. kayışta aynı boyutlar
+[33m2247cba[m Ana sayfa slider görsellerinin boyutları eşit yapıldı
+[33m326b557[m Ürün kartlarındaki görsellere hover animasyonu eklendi
+[33m7d04d79[m İkonlar kaldırıldı, kategori filtreleme eklendi ve Sanity kategorileri güncellendi
+[33m440cfda[m Modal popup beyaz yapıldı, ikonlar kaldırıldı ve ürün özellikleri güncellendi

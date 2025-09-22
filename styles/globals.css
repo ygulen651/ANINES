@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  
+  /* Yeni Marka Renk Paleti - Özelleştirilebilir */
+  --primary-color: #2563EB;
+  --primary-dark: #1D4ED8;
+  --primary-light: #60A5FA;
+  
+  --secondary-color: #10B981;
+  --secondary-dark: #059669;
+  --secondary-light: #6EE7B7;
+  
+  --accent-color: #F59E0B;
+  --accent-dark: #D97706;
+  --accent-light: #FCD34D;
+  
+  /* Gradient Renkleri */
+  --gradient-start: #2563EB;
+  --gradient-mid: #10B981;
+  --gradient-end: #F59E0B;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* Premium Corporate Animations */
+@keyframes slideInLeft {
+  from { 
+    opacity: 0; 
+    transform: translateX(-80px) translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(0) translateY(0); 
+  }
+}
+
+@keyframes slideFromBehind {
+  from { 
+    opacity: 0; 
+    transform: translateZ(-200px) scale(0.7) rotateY(15deg); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateZ(0) scale(1) rotateY(0deg); 
+  }
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  50% { 
+    transform: translateY(-20px) rotate(5deg); 
+  }
+}
+
+@keyframes morphingBlob {
+  0%, 100% { 
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; 
+    transform: rotate(0deg) scale(1);
+  }
+  25% { 
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; 
+    transform: rotate(90deg) scale(1.1);
+  }
+  50% { 
+    border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%; 
+    transform: rotate(180deg) scale(0.9);
+  }
+  75% { 
+    border-radius: 60% 40% 60% 30% / 70% 30% 60% 70%; 
+    transform: rotate(270deg) scale(1.05);
+  }
+}
+
+@keyframes textGlow {
+  0%, 100% { 
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1);
+  }
+  50% { 
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.5), 0 0 60px rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Apply animations */
+.slide-in-left {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.slide-from-behind {
+  animation: slideFromBehind 1.2s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.morphing-blob {
+  animation: morphingBlob 8s ease-in-out infinite;
+}
+
+.text-glow {
+  animation: textGlow 3s ease-in-out infinite;
+}
+
+/* Glass morphism utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Lanyard Section Responsive Styles - Katalog bölümünde */
+@media (max-width: 768px) {
+  .lanyard-section {
+    height: 350px !important;
+    width: 250px !important;
+    border-radius: 15px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .lanyard-section {
+    height: 300px !important;
+    width: 200px !important;
+    border-radius: 10px !important;
+  }
+}
