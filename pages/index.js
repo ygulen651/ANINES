@@ -3185,24 +3185,7 @@ export default function Home({ sliders, secondSlides, backgroundTexts, backgroun
                        ))}
                    </div>
                  </>
-               ) : (
-                 // Fallback
-                 <>
-                   <div className="nav-row">
-                     <a href="/" className="nav-link">Anasayfa</a>
-                     <a href="/hakkimizda" className="nav-link">Hakkımızda</a>
-                     <a href="/kalite-politikasi" className="nav-link">Kalite ve Gıda Güvenliği Politikamız</a>
-                     <a href="/markalarimiz" className="nav-link">Markalarımız</a>
-                   </div>
-                   <div className="nav-row">
-                     <a href="/kariyer" className="nav-link">Şölen'de Çalışmak</a>
-                     <a href="/boutique" className="nav-link">Şölen Boutique</a>
-                     <a href="/sosyal-sorumluluk" className="nav-link">Kurumsal Sosyal Sorumluluk</a>
-                     <a href="/iletisim" className="nav-link">İletişim</a>
-                     <a href="/blog" className="nav-link">Blog</a>
-                   </div>
-                 </>
-               )}
+              ) : null}
              </div>
              
              <div className="footer-social">

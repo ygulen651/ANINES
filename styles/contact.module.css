@@ -14,50 +14,18 @@
 }
 
 /* Hero Bölümü */
-.heroSection {
+/* Üst Başlık */
+.topHeadingSection {
   background: white;
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 40px 0 10px 0;
+}
+
+.pageHeading {
   text-align: center;
   color: #D21B21;
-  position: relative;
-  overflow: hidden;
-}
-
-.heroSection::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.15"/><circle cx="20" cy="80" r="0.5" fill="white" opacity="0.15"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-  opacity: 0.3;
-}
-
-.heroContent {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  padding: 0 20px;
-}
-
-.heroTitle {
-  font-size: 3.5rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-  color: #D21B21;
-  animation: fadeInUp 1s ease-out;
-}
-
-.heroSubtitle {
-  font-size: 1.25rem;
-  color: #D21B21;
-  opacity: 0.9;
-  margin-bottom: 2rem;
-  animation: fadeInUp 1s ease-out 0.3s both;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 @keyframes fadeInUp {
@@ -71,23 +39,128 @@
   }
 }
 
-/* Ana İçerik */
-.mainContent {
-  background: linear-gradient(135deg, #D21B21 0%, #E36688 100%);
-  position: relative;
-  z-index: 1;
-  border-radius: 30px 30px 0 0;
-  margin-top: -30px;
-  padding: 60px 0;
-  box-shadow: 0 -10px 50px rgba(0, 0, 0, 0.1);
+/* Konum ve Harita blokları */
+.locationsSection {
+  background: #fff;
+  padding: 20px 0 40px 0;
 }
 
-/* İletişim Kartları */
-.contactCards {
+.locationsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 30px;
-  margin-bottom: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.locationBlock {}
+
+.locationTitle {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #222;
+  margin: 10px 0 10px 0;
+}
+
+.locationAddress {
+  text-align: center;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.mapContainerSimple {
+  width: 100%;
+  height: 460px;
+  border: 1px solid #e5e5e5;
+}
+
+/* Telefon - Fax bölümü */
+.phoneFaxSection {
+  background: #fff;
+  padding: 10px 0 0 0;
+}
+
+.phoneFaxGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.phoneCol {
+  text-align: center;
+}
+
+.subHeading {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 10px 0;
+}
+
+.phoneLine {
+  margin: 6px 0;
+}
+
+/* Eposta alanı */
+.emailSection {
+  background: #fff;
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+
+.redDivider {
+  height: 2px;
+  background: #d21b21;
+  max-width: 1120px;
+  margin: 0 auto 20px auto;
+}
+
+.emailQuestion {
+  color: #d21b21;
+  font-size: 1.2rem;
+  margin: 0 0 10px 0;
+}
+
+.emailAddress {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Form bölümü */
+.formSection {
+  background: #fff;
+  padding: 10px 0 40px 0;
+}
+
+.formHeading {
+  text-align: center;
+  color: #d21b21;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 10px 0 10px 0;
+}
+
+.formInfo {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+}
+
+.formContainerCentered {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
 }
 
 .contactCard {
@@ -145,26 +218,11 @@
 }
 
 /* İletişim Formu */
-.contactForm {
-  background: white;
-  padding: 50px;
-  border-radius: 25px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(210, 27, 33, 0.1);
-}
+.formContainer {}
 
-.formGroup {
-  margin-bottom: 30px;
-  position: relative;
-}
+.formGroup { margin-bottom: 0; }
 
-.formLabel {
-  display: block;
-  font-weight: 600;
-  color: #374151;
-  margin-bottom: 8px;
-  font-size: 0.95rem;
-}
+.formLabel { display: none; }
 
 .formInput {
   width: 100%;
@@ -184,24 +242,20 @@
   transform: translateY(-2px);
 }
 
-.formTextarea {
-  resize: vertical;
-  min-height: 120px;
-}
+.formTextarea { min-height: 180px; grid-column: span 2; }
 
-.submitButton {
-  width: 100%;
-  background: linear-gradient(135deg, #D21B21 0%, #E36688 100%);
-  color: white;
-  padding: 18px 30px;
+.blackButton {
+  grid-column: span 2;
+  width: 130px;
+  justify-self: center;
+  background: #1f1f1f;
+  color: #fff;
+  padding: 14px 26px;
   border: none;
-  border-radius: 12px;
-  font-size: 1.1rem;
+  border-radius: 2px;
+  letter-spacing: 2px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
 }
 
 .submitButton:hover:not(:disabled) {
@@ -251,23 +305,7 @@
   }
 }
 
-/* Harita Bölümü */
-.mapSection {
-  background: #F5F6ED;
-  padding: 100px 0 120px 0;
-  margin-top: 80px;
-}
-
-.mapContainer {
-  background: white;
-  border-radius: 25px;
-  overflow: hidden;
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
-  height: 600px;
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+/* Eski map ve hero stilleri kaldırıldı / sade şablon */
 
 .mapPlaceholder {
   width: 100%;
@@ -282,36 +320,10 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .heroTitle {
-    font-size: 2.5rem;
-  }
-
-  .heroSubtitle {
-    font-size: 1.1rem;
-  }
-
-  .contactForm {
-    padding: 30px 20px;
-  }
-
-  .contactCards {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .mainContent {
-    padding: 40px 0;
-  }
-
-  .mapSection {
-    padding: 60px 0 80px 0;
-    margin-top: 40px;
-  }
-
-  .mapContainer {
-    height: 450px;
-    border-radius: 20px;
-    margin: 0 15px;
-  }
+@media (max-width: 900px) {
+  .locationsGrid { grid-template-columns: 1fr; }
+  .phoneFaxGrid { grid-template-columns: 1fr; }
+  .formGrid { grid-template-columns: 1fr; }
+  .formTextarea { grid-column: span 1; min-height: 160px; }
+  .blackButton { grid-column: span 1; }
 }

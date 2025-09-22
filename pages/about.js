@@ -1499,20 +1499,6 @@ export default function About({ milestones, documents, corporateIdentity }) {
               <h2>Hayatın her anında</h2>
             </div>
             
-            <div className="footer-nav">
-              <div className="nav-row">
-                <a href="/" className="nav-link">Anasayfa</a>
-                <a href="/about" className="nav-link">Hakkımızda</a>
-                <a href="/products" className="nav-link">Ürünler</a>
-                <a href="/catalog" className="nav-link">Katalog</a>
-              </div>
-              <div className="nav-row">
-                <a href="/blog" className="nav-link">Blog</a>
-                <a href="/contact" className="nav-link">İletişim</a>
-                <a href="/documents" className="nav-link">Dökümanlar</a>
-              </div>
-            </div>
-            
             <div className="footer-social">
               <p className="social-text">Bizi takip edin!</p>
               <div className="social-icons">

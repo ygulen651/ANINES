@@ -861,179 +861,86 @@ export default function Contact() {
         </ul>
       </nav>
 
-      {/* Hero Bölümü */}
-      <section className={styles.heroSection}>
-        <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>İletişim</h1>
-          <p className={styles.heroSubtitle}>
-            Sizinle iletişim kurmaktan mutluluk duyarız. Sorularınız, önerileriniz 
-            ve işbirliği teklifleriniz için bize ulaşın.
-          </p>
+      {/* Başlık */}
+      <section className={styles.topHeadingSection}>
+        <h1 className={styles.pageHeading}>İLETİŞİM</h1>
+      </section>
+
+      {/* Konum ve Haritalar */}
+      <section className={styles.locationsSection}>
+        <div className={styles.locationsGrid}>
+          <div className={styles.locationBlock}>
+            <h3 className={styles.locationTitle}>MERKEZ - FABRİKA</h3>
+            <p className={styles.locationAddress}>Organize Sanayi Bölgesi 16. Cadde No:16<br/>KARAMAN / TÜRKİYE</p>
+            <div className={styles.mapContainerSimple}>
+              <iframe
+                src={`https://www.google.com/maps?q=${encodeURIComponent('Organize Sanayi Bölgesi 16. Cadde No:16, Karaman, Türkiye')}&output=embed`}
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Merkez Fabrika Harita"
+              ></iframe>
+            </div>
+          </div>
+          <div className={styles.locationBlock}>
+            <h3 className={styles.locationTitle}>İSTANBUL BÖLGE MÜDÜRLÜĞÜ</h3>
+            <p className={styles.locationAddress}>Mahmutbey Mahallesi, İSTOÇ Toptancılar Sitesi, 32. Ada No: 66/68 Bağcılar<br/>İSTANBUL / TÜRKİYE</p>
+            <div className={styles.mapContainerSimple}>
+              <iframe
+                src={`https://www.google.com/maps?q=${encodeURIComponent('İSTOÇ Toptancılar Sitesi 32. Ada No:66/68 Bağcılar, İstanbul, Türkiye')}&output=embed`}
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="İstanbul Bölge Müdürlüğü Harita"
+              ></iframe>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Ana İçerik */}
-      <div className={styles.mainContent}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* İletişim Kartları */}
-          <div className={styles.contactCards}>
-            <div className={styles.contactCard}>
-              <div className={styles.contactIcon}>
-                <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                </svg>
-              </div>
-              <h3>Adres</h3>
-              <p>
-                Büyük Kayacık OSB Mahallesi<br />
-                Konya Organize Sanayi Bölgesi 11. Sk. No:4<br />
-                42050 Selçuklu / Konya
-              </p>
-            </div>
-
-            <div className={styles.contactCard}>
-              <div className={styles.contactIcon}>
-                <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
-                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                </svg>
-              </div>
-              <h3>Telefon</h3>
-              <p>
-                0 332 342 39 41<br />
-               
-              </p>
-            </div>
-
-            <div className={styles.contactCard}>
-              <div className={styles.contactIcon}>
-                <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
-                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                </svg>
-              </div>
-              <h3>E-posta</h3>
-              <p>
-                info@oslo.com.tr<br />
-   
-              </p>
-            </div>
-
+      {/* Telefon ve Fax */}
+      <section className={styles.phoneFaxSection}>
+        <div className={styles.phoneFaxGrid}>
+          <div className={styles.phoneCol}>
+            <h4 className={styles.subHeading}>TELEFON VE FAX</h4>
+            <p className={styles.phoneLine}>+90 (338) 224 12 30</p>
+            <p className={styles.phoneLine}>+90 (338) 224 12 34</p>
           </div>
-
-          {/* İletişim Formu */}
-          <div className="max-w-2xl mx-auto">
-            <div className={styles.contactForm}>
-              <h2 style={{ fontSize: '2rem', fontWeight: '700', color: '#1f2937', marginBottom: '30px', textAlign: 'center' }}>
-                Bize Mesaj Gönderin
-              </h2>
-              
-              {submitStatus === 'success' && (
-                <div className={styles.successMessage}>
-                  Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.
-                </div>
-              )}
-              
-              <form onSubmit={handleSubmit}>
-                <div className={styles.formGroup}>
-                  <label className={styles.formLabel}>Ad Soyad *</label>
-                  <input 
-                    type="text" 
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    className={styles.formInput}
-                    placeholder="Adınız ve soyadınız"
-                    required
-                  />
-                </div>
-                
-                <div className={styles.formGroup}>
-                  <label className={styles.formLabel}>E-posta *</label>
-                  <input 
-                    type="email" 
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className={styles.formInput}
-                    placeholder="E-posta adresiniz"
-                    required
-                  />
-                </div>
-                
-                <div className={styles.formGroup}>
-                  <label className={styles.formLabel}>Telefon</label>
-                  <input 
-                    type="tel" 
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className={styles.formInput}
-                    placeholder="Telefon numaranız"
-                  />
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label className={styles.formLabel}>Konu</label>
-                  <input 
-                    type="text" 
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    className={styles.formInput}
-                    placeholder="Mesaj konusu"
-                  />
-                </div>
-                
-                <div className={styles.formGroup}>
-                  <label className={styles.formLabel}>Mesaj *</label>
-                  <textarea 
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    className={`${styles.formInput} ${styles.formTextarea}`}
-                    placeholder="Mesajınızı detaylı olarak yazın..."
-                    required
-                  />
-                </div>
-                
-                <button 
-                  type="submit"
-                  className={styles.submitButton}
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? (
-                    <>
-                      <span className={styles.loadingSpinner}></span>
-                      Gönderiliyor...
-                    </>
-                  ) : (
-                    'Mesaj Gönder'
-                  )}
-                </button>
-              </form>
-            </div>
+          <div className={styles.phoneCol}>
+            <h4 className={styles.subHeading}>TELEFON VE FAX</h4>
+            <p className={styles.phoneLine}>+90 (212) 659 19 66 - 67</p>
+            <p className={styles.phoneLine}>+90 (212) 659 19 68</p>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Harita Bölümü */}
-      <section className={styles.mapSection}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 style={{ fontSize: '2.5rem', fontWeight: '700', color: '#1f2937', marginBottom: '40px', textAlign: 'center' }}>
-            Konumumuz
-          </h2>
-          <div className={styles.mapContainer}>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3125.8267486667877!2d32.48503431524658!3d37.87384997929876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d085b7e7a7a7a7%3A0x7a7a7a7a7a7a7a7a!2sOslo%20G%C4%B1da%20San.%20Tic.%20LTD.%20%C5%9ET%C4%B0.%2C%20B%C3%BCy%C3%BCk%20Kayac%C4%B1k%20OSB%20Mahallesi%20Konya%20Organize%20Sanayi%20B%C3%B6lgesi%2011.%20Sk.%20No%3A4%2C%2042050%20Sel%C3%A7uklu%2FKonya!5e0!3m2!1str!2str!4v1703962800000!5m2!1str!2str"
-              width="100%"
-              height="100%"
-              style={{ border: 0, borderRadius: '20px' }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Oslo Gıda San. Tic. LTD. ŞTİ. - Konya Organize Sanayi Bölgesi"
-            ></iframe>
-          </div>
+      {/* E-posta */}
+      <section className={styles.emailSection}>
+        <div className={styles.redDivider}></div>
+        <p className={styles.emailQuestion}>SORULARINIZ İÇİN</p>
+        <a href="mailto:bilgi@anibiskuvi.com.tr" className={styles.emailAddress}>bilgi@anibiskuvi.com.tr</a>
+      </section>
+
+      {/* İletişim Formu */}
+      <section className={styles.formSection}>
+        <h2 className={styles.formHeading}>İLETİŞİM FORMU</h2>
+        <p className={styles.formInfo}>Değerli Ziyaretçimiz, Bizimle iletişime geçmek için iletişim formunu eksiksiz olarak doldurunuz.<br/>(Aşağıda alınan tüm bilgiler KVKK (Kişisel Verileri Koruma Kanunu) ilkesine uygun olarak gizli tutulmaktadır.)</p>
+        <div className={styles.formContainerCentered}>
+          {submitStatus === 'success' && (
+            <div className={styles.successMessage}>Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.</div>
+          )}
+          <form onSubmit={handleSubmit} className={styles.formGrid}> 
+            <input type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder="Adı Soyadı" className={styles.formInput} required />
+            <input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="E-Posta" className={styles.formInput} required />
+            <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} placeholder="Telefon" className={styles.formInput} />
+            <input type="text" name="subject" value={formData.subject} onChange={handleInputChange} placeholder="Konu" className={styles.formInput} />
+            <textarea name="message" value={formData.message} onChange={handleInputChange} placeholder="Mesajınız" className={`${styles.formInput} ${styles.formTextarea}`}></textarea>
+            <button type="submit" className={styles.blackButton} disabled={isSubmitting}>{isSubmitting ? 'Gönderiliyor...' : 'GÖNDER'}</button>
+          </form>
         </div>
       </section>
     </div>
